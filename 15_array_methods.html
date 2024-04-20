@@ -3,10 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+    </style>
 </head>
 <body>
+
 <script>
+    /*var array1 = [1, 2, 3, "hello", 5, true];
+    /!*console.log(array[5]);*!/
+
+    var array2 = [1, 2, 3, 4, 5, 6, 15, 8, 9, 10];
+
+    array2.push("hello");  // adds a new element to the end of the given array.
+    console.log(array2);
+
+    array2.pop();
+    console.log(array2);   // removes the last element of the given array.
+
+    array2.shift();  // removes the first element of the given array.
+    console.log(array2);
+
+    array2.unshift("welcome");  // adds a new element to the start of the given array.
+    console.log(array2);
+
+    array2.unshift("yo","bro");  // can add multiple elements to the start of the given array.
+    console.log(array2);
+
+    array1.concat(array2); // used to merge the elements of two arrays without changing the two existing arrays.
+    console.log(array2);
+    console.log(array1);
+
+    var newarray = array1.concat(array2);
+    console.log(newarray);
+
+    newarray.slice(2);  // [3, 'hello', 5, true, 'yo', 'bro', 'welcome', 2, 3, 4, 5, 6, 15, 8, 9, 10]
+                        // outputs the elements after the given number of the array.
+
+    newarray.slice(-3); //[8, 9, 10]
+                        // outputs the values of the elements of the array, counting from the back.
+
+    newarray.slice(2,4); //[3, 'hello'] outputs the values of the elements from the start to the end of the given range.
+
+    var array3 = ["cat1","cat2","cat3","cat4","cat5","cat6"];
+
+
+    var newarray3 = array3.splice(3); // removes the elements of the array permanently from the given index onwards.
+    console.log(newarray3);
+    console.log(array3);
+
+    array3 = ["cat1","cat2","cat3","cat4","cat5","cat6"];
+    newarray3 = array3.splice(2,2); //first num-index number    second num-the amount of indexes to be removed from the given index onwards.
+    console.log(newarray3);
+    console.log(array3);
+
+    console.log(array2.indexOf(15)); // used to find the index of the given element.
+
+    console.log(array2.indexOf(11)); // if the element does not exist, the output will be -1.
+
+    var array3 = ["cat1","cat2","cat3","cat4","cat5","cat6", "cat3", "cat5"];
+
+    console.log(array3.indexOf("cat3"));
+    console.log(array3.lastIndexOf("cat3")); // outputs the last index of the given element when there are duplicates.
+
+    console.log(array3.includes("cat9")); // outputs a boolean value(true/false) depending on whether the given element is in the array.
+    console.log(array3.includes("cat4"));
+
+    var numberarray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+    /!*const oddNumbers = (numberarray) => {
+        for(var i = 0; i<numberarray.length; i++){
+            if(numberarray[i]%2==0){
+                numberarray.splice(i,1);
+            }
+        }
+        return numberarray;
+    }
+
+    console.log(oddNumbers(numberarray));*!/
+
+    var result = numberarray.filter(function (item){
+        return item%2>0;
+    });
+    console.log("Results : "+result);
+
+    numberarray.map(item =>{
+        console.log(item);
+        });
+
+    numberarray.map(item, index=>{
+        console.log(index+" : "+item);
+    });*/
+
+    var array = [1, 2, 3, 24, 5, 6, 15, 8, 9, 10];
+    function findmax(array){
+        var max = 0;
+        array.map(item =>{
+            if(item>max){
+                max = item;
+            }
+        })
+        console.log(max);
+
+    }
+
+    findmax(array);
+
+    console.log(array.sort());
+
+    console.log(array.reverse());
+
+    var some =array.some((item) => {return item%2>0;}); // checks if at least one element meets the conditions and prints true or false.
+    console.log(some);
+
+    var every = array.every((item) => {return item%2>0;}); // checks if all elements meet the conditions and provide boolean value.
+    console.log(every);
+
+
 
 </script>
+
 </body>
 </html>
