@@ -31,6 +31,21 @@
     array2.pop();
     console.log(array2);   // removes the last element of the given array.
 
+    array2.shift();  // removes the first element of the given array.
+    console.log(array2);
+
+    array2.unshift("welcome");  // adds a new element to the start of the given array.
+    console.log(array2);
+
+    array2.unshift("yo","bro");  // can add multiple elements to the start of the given array.
+    console.log(array2);
+
+    array1.concat(array2); // used to merge the elements of two arrays without changing the two existing arrays.
+    console.log(array2);
+    console.log(array1);
+
+    var newarray = array1.concat(array2);
+    console.log(newarray);
 </script>
 
 </body>
