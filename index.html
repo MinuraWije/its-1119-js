@@ -67,11 +67,11 @@
     console.log(array3.lastIndexOf("cat3")); // outputs the last index of the given element when there are duplicates.
 
     console.log(array3.includes("cat9")); // outputs a boolean value(true/false) depending on whether the given element is in the array.
-    console.log(array3.includes("cat4"));*/
+    console.log(array3.includes("cat4"));
 
     var numberarray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
-    const oddNumbers = (numberarray) => {
+    /!*const oddNumbers = (numberarray) => {
         for(var i = 0; i<numberarray.length; i++){
             if(numberarray[i]%2==0){
                 numberarray.splice(i,1);
@@ -80,7 +80,47 @@
         return numberarray;
     }
 
-    console.log(oddNumbers(numberarray));
+    console.log(oddNumbers(numberarray));*!/
+
+    var result = numberarray.filter(function (item){
+        return item%2>0;
+    });
+    console.log("Results : "+result);
+
+    numberarray.map(item =>{
+        console.log(item);
+        });
+
+    numberarray.map(item, index=>{
+        console.log(index+" : "+item);
+    });*/
+
+    var array = [1, 2, 3, 24, 5, 6, 15, 8, 9, 10];
+    function findmax(array){
+        var max = 0;
+        array.map(item =>{
+            if(item>max){
+                max = item;
+            }
+        })
+        console.log(max);
+
+    }
+
+    findmax(array);
+
+    console.log(array.sort());
+
+    console.log(array.reverse());
+
+    var some =array.some((item) => {return item%2>0;}); // checks if at least one element meets the conditions and prints true or false.
+    console.log(some);
+
+    var every = array.every((item) => {return item%2>0;}); // checks if all elements meet the conditions and provide boolean value.
+    console.log(every);
+
+
+
 </script>
 
 </body>
