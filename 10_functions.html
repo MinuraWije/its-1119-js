@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Named Function
+    function myFunction(){
+        console.log("Welcome to the function");
+    }
+    myFunction();
+
+    function myFunction2(param1, param2){
+        console.log("param1 + param2 = "+(param1+param2));
+    }
+    myFunction2(1,2);
+    myFunction2(); //JS is not type safe.Therefor adding no parameters results in no errors.
+
+
+    // Expression functions
+    var myFunction3 = function(){
+        console.log("Welcome to myFunction3");
+    }
+    myFunction3();
+
+    var myFunction4 = function (param1,param2){
+        console.log("Param1 + param2 = "+(param1+param2));
+    }
+    myFunction4(3,7);
+
+
+    //Arrow functions
+    var arrowFunction = () => {
+        console.log("Welcome to arrow functions.");
+    }
+    arrowFunction();
+
+    var arrowFunctions2 = (param1,param2) => {
+        console.log("param1 + param2 = "+ (param1+param2));
+    }
+    arrowFunctions2(10,20);
+
+
+    //annonymous functions
+
+    (function(){
+        console.log("I'm an annonymous function");
+    })
+
+
+    // call back functions
+
+    function callback(){
+        console.log("Hello I'm the callback function");
+    }
+    function callback2(){
+        console.log("This is call back 2 function")
+    }
+    function process(param){
+        param();
+    }
+
+    //process(callback());
+    process(callback2());
+
+
+    // Function constructor
+    var fn = new Function('param1','param2', 'return param1+param2');
+    var result = fn(100, 200);
+    console.log("Result : ", result);
+</script>
+</body>
+</html>

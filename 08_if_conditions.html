@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var marks = 30;
+    if(marks>=75){
+        console.log("A");
+    }else if(marks>=65){
+        console.log("B");
+    }else if(marks>=55){
+        console.log("C");
+    }else if(marks>=35){
+        console.log("S");
+    }else{
+        console.log("F");
+    }
+
+    var x = 10;
+
+    if(x>5){
+        console.log("OK");
+    }else{
+        console.log("NO");
+    }
+
+    var result = (x>5) ? "OK" : "NO";
+    console.log("result : ", result);
+
+
+    var marks = 30;
+    var grade = (marks>=75) ? "A" :
+        (marks>=65) ? "B" :
+            (marks>=55) ? "C" :
+                (marks>=35) ? "S" : "F";
+    console.log("Grade : "+grade);
+</script>
+</body>
+</html>
