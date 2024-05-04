@@ -119,8 +119,12 @@
     var every = array.every((item) => {return item%2>0;}); // checks if all elements meet the conditions and provide boolean value.
     console.log(every);
 
+    array.from("abcdef"); //makes an array based on the length
+    array.of(1,"hello",true); //makes an array based on the arguments given.
 
 
+    let literalBasedArray = [1,2,"hello",true];  //only difference between these 2 array types are the way they are made. Nothing else is different.
+    let constructorBasedArray = new Array(1,2,"hello",true);
 </script>
 
 </body>
